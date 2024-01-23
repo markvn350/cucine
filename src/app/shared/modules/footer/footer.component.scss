@@ -1,0 +1,24 @@
+@use "../../../../mixins.scss" as m;
+@use "../../../../variables.scss" as v;
+
+.footer{
+    font-family: v.$fuentePrincipal;
+    padding: 3rem;
+
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include m.tablet{
+            flex-direction: row;
+        }
+        justify-content: space-between;
+    }
+
+    &__copyright{
+        margin-top: 2rem;
+        @include m.tablet{
+            margin-top: 0%;
+        }
+    }
+}

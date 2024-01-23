@@ -1,0 +1,101 @@
+@use "../../../../mixins.scss" as m;
+@use "../../../../variables.scss" as v;
+
+.bloques{
+    padding-top: 3rem;
+    &__grid{
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        @include m.tablet{
+            grid-template-rows: unset;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+.bloque{
+    color: v.$blanco;
+    padding: 3rem 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center; 
+
+
+    @include m.desktop{
+        min-height: 30rem;
+    }
+
+    &__heading{
+        display: block;
+        font-size: 3rem;
+        text-align: center;
+        margin: 0px auto;
+        padding: 2rem 0px;
+        width: 85%;
+        font-weight: 700;
+        @include m.tablet{
+            width: 80%;
+        }
+        @include m.desktop{
+            width: 45%;
+        }
+        border-top: 1px solid v.$blanco;
+    }
+
+    &__texto{
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+        padding-bottom: 2rem;
+        width: 85%;
+        
+        @include m.tablet{
+            width: 80%;
+            font-size: 1.5rem;
+        }
+        @include m.desktop{
+            width: 45%;
+            font-size: 1.75rem;
+        }
+        border-bottom: 1px solid v.$blanco;
+
+    }
+
+   
+}
+
+.v1{
+    background-color: v.$primario;
+    grid-row: 2/3;
+    @include m.tablet{
+        grid-row: unset;
+    }
+}
+
+.v2{
+    background-image: url("../../../../assets/img/bloque_1.jpg");
+    grid-row: 1/2;
+    @include m.tablet{
+        grid-row: unset;
+    }
+}
+
+.v3{
+    background-image: url("../../../../assets/img/bloque_2.jpg");
+    grid-row: 3/4;
+    @include m.tablet{
+        grid-row: unset;
+    }
+}
+
+.v4{
+    background-color: v.$secundario;
+    grid-row: 4/5;
+    @include m.tablet{
+        grid-row: unset;
+    }
+}
+

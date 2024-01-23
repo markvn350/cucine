@@ -1,0 +1,13 @@
+@use "../../../../mixins.scss" as m;
+@use "../../../../variables.scss" as v;
+
+.navigation{
+    font-family: v.$fuentePrincipal;
+   
+
+    &__link{
+        padding: 0px 1rem;
+        text-decoration: none;
+        color: v.$negro;
+    }
+}
